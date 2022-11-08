@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  background-color: $clr-grayish-blue;
+}
+
+h1 {
+  position: absolute;
+  opacity: 0;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1150px;
+  margin: auto;
+  padding: 70px 25px;
+  display: grid;
+  gap: 25px;
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+    height: 100vh;
+  }
+}
+.container > div {
+  padding: 28px 30px;
+  border-radius: 8px;
+}
+.card {
+  color: $clr-gray;
+  box-shadow: $card-shadow;
+  transition: $transition;
+  &:hover {
+    box-shadow: $card-shadow-hover;
+  }
+
+  &__figure {
+    @include flex(row, flex-start, center);
+  }
+  &__img {
+    width: 30px;
+    border-radius: 50px;
+    margin-right: 18px;
+  }
+  &__name {
+    color: $clr-white;
+  }
+  &__status {
+    opacity: 50%;
+  }
+  &__title {
+    color: $clr-white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 15px;
+  }
+  &__text {
+    margin-top: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    opacity: 70%;
+  }
+}
+
+.card--violet {
+  background: $clr-moderate-violet url(../../images/bg-pattern-quotation.svg)
+    no-repeat right 11% top;
+
+  @include tablet {
+    grid-column: 1 / span 2;
+  }
+}
+.card--gray {
+  background-color: $clr-dark-grayish-blue;
+
+  @include tablet {
+    grid-column: 3 / 4;
+  }
+}
+.card--white,
+.card--white2 {
+  background-color: $clr-white;
+  color: $clr-dark-blackish-blue;
+
+  .card__name,
+  .card__title {
+    color: $clr-dark-blackish-blue;
+  }
+}
+.card--white {
+  @include tablet {
+    grid-row: 2;
+  }
+}
+.card--dark {
+  background-color: $clr-dark-blackish-blue;
+  @include tablet {
+    grid-column: 2 / -1;
+  }
+  @include desktop {
+    grid-row: 2;
+    grid-column: 2 / span 2;
+  }
+}
+.card--white2 {
+  @include tablet {
+    grid-row: 3;
+    grid-column: 1 / -1;
+  }
+  @include desktop {
+    grid-row: 1 / span 2;
+    grid-column: 4 / -1;
+  }
+}

@@ -1,0 +1,17 @@
+// Colors
+$clr-moderate-violet: hsl(263, 55%, 52%);
+$clr-dark-grayish-blue: hsl(217, 19%, 35%);
+$clr-dark-blackish-blue: hsl(219, 29%, 14%);
+$clr-white: hsl(0, 0%, 100%);
+
+$clr-gray: hsl(0, 0%, 81%);
+$clr-grayish-blue: hsl(210, 46%, 95%);
+
+// Border shadow
+$card-shadow: 0 0.063rem 0.188rem rgba($clr-dark-blackish-blue, 0.12),
+  0 0.063rem 0.125rem rgba($clr-dark-blackish-blue, 0.24);
+$card-shadow-hover: 0 0.875rem 1.75rem rgba($clr-dark-blackish-blue, 0.25),
+  0 0.625rem 0.625rem rgba($clr-dark-blackish-blue, 0.22);
+
+// Transitions
+$transition: all 0.2s ease-in-out;
